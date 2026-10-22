@@ -125,11 +125,11 @@ export const ProductModal: React.FC = () => {
                 <span className="text-[11px] text-gray-500 block font-semibold">Retail Price:</span>
                 <div className="flex items-baseline gap-2">
                   <span className="text-2xl sm:text-3xl font-black text-gray-900">
-                    ${laptop.price.toLocaleString()}
+                    ₦{laptop.price.toLocaleString()}
                   </span>
                   {laptop.originalPrice && (
                     <span className="text-sm text-gray-400 line-through">
-                      ${laptop.originalPrice.toLocaleString()}
+                      ₦{laptop.originalPrice.toLocaleString()}
                     </span>
                   )}
                 </div>
@@ -236,7 +236,7 @@ export const ProductModal: React.FC = () => {
               >
                 <ShoppingCart className="w-4 h-4" />
                 <span>
-                  Add {quantity} to Cart (${(laptop.price * quantity).toLocaleString()})
+                  Add {quantity} to Cart (₦{(laptop.price * quantity).toLocaleString()})
                 </span>
               </button>
             </div>

@@ -190,7 +190,7 @@ export const OrderSuccessModal: React.FC = () => {
                   </div>
                   <div className="text-right text-xs">
                     <span className="font-extrabold text-blue-600">
-                      ${(item.laptop.price * item.quantity).toLocaleString()}
+                      ₦{(item.laptop.price * item.quantity).toLocaleString()}
                     </span>
                   </div>
                 </div>
@@ -200,7 +200,7 @@ export const OrderSuccessModal: React.FC = () => {
             <div className="pt-3 border-t border-gray-200 flex justify-between items-baseline text-sm">
               <span className="font-bold text-gray-700">Total Paid:</span>
               <span className="text-xl font-black text-gray-900">
-                ${lastCreatedOrder.total.toLocaleString()}
+                ₦{lastCreatedOrder.total.toLocaleString()}
               </span>
             </div>
           </div>

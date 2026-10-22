@@ -115,7 +115,7 @@ export const AboutMeSection: React.FC = () => {
                   Welcome to <strong className="text-gray-900">LAPTOP HUB</strong>. As a professional systems engineer with over 5 years of hands-on experience in personal computing hardware and software development, I built this platform with one single mission: to cut through the noise of misleading technical specs and deliver genuine, high-caliber laptops directly to your home.
                 </p>
                 <p>
-                  Too many shoppers buy laptops only to find poor thermal throttling, dim displays, or inadequate battery longevity. At LAPTOP HUB, every single model in our store—from Apple M3 Max workstations to Copilot+ AI ultrabooks and RTX gaming powerhouses—is thoroughly evaluated against real-world compile workloads, rendering stress, and battery run-down tests.
+                  Too many shoppers buy laptops only to find poor thermal throttling, dim displays, or inadequate battery longevity. At LAPTOP HUB, every single model in our store (ranging from Apple M3 Max workstations to Copilot+ AI ultrabooks and RTX gaming powerhouses) is thoroughly evaluated against real-world compile workloads, rendering stress, and battery run-down tests.
                 </p>
                 <p>
                   Based in <strong className="text-gray-900">Ikot Udoma</strong>, we coordinate direct doorstep deliveries, live order tracking, and phone support at <strong className="text-gray-900">+234 907 6934 980</strong> to ensure complete peace of mind.

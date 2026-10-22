@@ -22,7 +22,7 @@ export const ShopSection: React.FC = () => {
 
   const [selectedBrand, setSelectedBrand] = useState<string>('All');
   const [sortBy, setSortBy] = useState<'featured' | 'price-asc' | 'price-desc' | 'rating'>('featured');
-  const [maxPrice, setMaxPrice] = useState<number>(4000);
+  const [maxPrice, setMaxPrice] = useState<number>(6000000);
   const [inStockOnly, setInStockOnly] = useState<boolean>(false);
 
   // Filtered & Sorted laptops
@@ -68,7 +68,7 @@ export const ShopSection: React.FC = () => {
   const resetFilters = () => {
     setSelectedCategory('all');
     setSelectedBrand('All');
-    setMaxPrice(4000);
+    setMaxPrice(6000000);
     setInStockOnly(false);
     setSearchQuery('');
   };
@@ -76,7 +76,7 @@ export const ShopSection: React.FC = () => {
   const hasActiveFilters =
     selectedCategory !== 'all' ||
     selectedBrand !== 'All' ||
-    maxPrice < 4000 ||
+    maxPrice < 6000000 ||
     inStockOnly ||
     searchQuery.trim() !== '';
 
@@ -115,7 +115,7 @@ export const ShopSection: React.FC = () => {
               <div>
                 <span className="text-[11px] text-gray-500 block font-semibold">Cart Accumulated:</span>
                 <span className="text-base font-black text-blue-600">
-                  ${subtotal.toLocaleString()} ({totalItems} items)
+                  ₦{subtotal.toLocaleString()} ({totalItems} items)
                 </span>
               </div>
               <button
@@ -179,21 +179,21 @@ export const ShopSection: React.FC = () => {
             <div>
               <div className="flex items-center justify-between text-xs font-bold text-gray-500 uppercase tracking-wider mb-1.5">
                 <span>Max Price:</span>
-                <span className="text-blue-600 font-black">${maxPrice.toLocaleString()}</span>
+                <span className="text-blue-600 font-black">₦{maxPrice.toLocaleString()}</span>
               </div>
               <input
                 type="range"
-                min="1000"
-                max="4000"
-                step="100"
+                min="1000000"
+                max="6000000"
+                step="100000"
                 value={maxPrice}
                 onChange={(e) => setMaxPrice(Number(e.target.value))}
                 className="w-full accent-blue-600 cursor-pointer"
               />
               <div className="flex justify-between text-[10px] text-gray-400 mt-1">
-                <span>$1,000</span>
-                <span>$2,500</span>
-                <span>$4,000</span>
+                <span>₦1,000,000</span>
+                <span>₦3,500,000</span>
+                <span>₦6,000,000</span>
               </div>
             </div>
 

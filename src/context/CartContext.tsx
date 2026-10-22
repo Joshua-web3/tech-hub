@@ -112,11 +112,11 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
               quantity: 1
             }
           ],
-          subtotal: 1399,
+          subtotal: 1850000,
           shipping: 0,
-          tax: 111.92,
-          discount: 100,
-          total: 1410.92,
+          tax: 148000,
+          discount: 50000,
+          total: 1948000,
           deliveryDetails: {
             fullName: 'Jay Jhay',
             phoneNumber: '+234 907 6934 980',
@@ -199,14 +199,14 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
       }
       return [...prev, { laptop, quantity }];
     });
-    addToast(`Added to Cart!`, `${laptop.name} has been added.`, 'success');
+    addToast('Added to Cart!', `${laptop.name} has been added.`, 'success');
   };
 
   const removeFromCart = (laptopId: string) => {
     const removedItem = cart.find((item) => item.laptop.id === laptopId);
     setCart((prev) => prev.filter((item) => item.laptop.id !== laptopId));
     if (removedItem) {
-      addToast(`Item removed`, `${removedItem.laptop.name} removed from cart.`, 'info');
+      addToast('Item removed', `${removedItem.laptop.name} removed from cart.`, 'info');
     }
   };
 
@@ -240,10 +240,10 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
       setDiscountPercent(10);
       addToast('Coupon Applied!', '10% discount has been applied to your order.', 'success');
       return true;
-    } else if (trimmed === 'SAVE50') {
+    } else if (trimmed === 'SAVE50' || trimmed === 'SAVE50K') {
       setDiscountCode(trimmed);
       setDiscountPercent(0);
-      addToast('Coupon Applied!', '$50 discount applied.', 'success');
+      addToast('Coupon Applied!', '₦50,000 discount applied.', 'success');
       return true;
     } else {
       addToast('Invalid Coupon Code', 'Try using code HUB10 for 10% off.', 'error');
@@ -258,16 +258,16 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
   };
 
   const discountAmount =
-    discountCode === 'SAVE50'
-      ? Math.min(50, subtotal)
+    discountCode === 'SAVE50' || discountCode === 'SAVE50K'
+      ? Math.min(50000, subtotal)
       : Math.round((subtotal * discountPercent) / 100);
 
-  // Free shipping over $500, otherwise $25
-  const shippingFee = subtotal > 500 || subtotal === 0 ? 0 : 25;
+  // Free shipping over ₦500,000, otherwise ₦15,000
+  const shippingFee = subtotal > 500000 || subtotal === 0 ? 0 : 15000;
 
-  // 8% tax
+  // 7.5% VAT standard
   const taxableAmount = Math.max(0, subtotal - discountAmount);
-  const taxAmount = Math.round(taxableAmount * 0.08 * 100) / 100;
+  const taxAmount = Math.round(taxableAmount * 0.075);
 
   const grandTotal = Math.max(0, taxableAmount + shippingFee + taxAmount);
 

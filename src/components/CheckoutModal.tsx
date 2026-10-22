@@ -563,7 +563,7 @@ export const CheckoutModal: React.FC = () => {
                     <span className="text-gray-700">{item.laptop.name}</span>
                   </div>
                   <span className="font-bold text-gray-900">
-                    ${(item.laptop.price * item.quantity).toLocaleString()}
+                    ₦{(item.laptop.price * item.quantity).toLocaleString()}
                   </span>
                 </div>
               ))}
@@ -573,7 +573,7 @@ export const CheckoutModal: React.FC = () => {
               <div>
                 <span className="text-xs text-gray-600 block">Total Due:</span>
                 <span className="text-2xl font-black text-blue-600">
-                  ${grandTotal.toLocaleString()}
+                  ₦{grandTotal.toLocaleString()}
                 </span>
               </div>
 
@@ -606,7 +606,7 @@ export const CheckoutModal: React.FC = () => {
               ) : (
                 <>
                   <ShieldCheck className="w-5 h-5 text-white" />
-                  <span>Confirm Order to Ikot Udoma (${grandTotal.toLocaleString()})</span>
+                  <span>Confirm Order to Ikot Udoma (₦{grandTotal.toLocaleString()})</span>
                 </>
               )}
             </button>

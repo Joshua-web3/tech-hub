@@ -112,7 +112,7 @@ export const CartView: React.FC = () => {
                 <span>
                   Add{' '}
                   <strong className="text-blue-600">
-                    ${(freeShippingThreshold - subtotal).toLocaleString()}
+                    ₦{(freeShippingThreshold - subtotal).toLocaleString()}
                   </strong>{' '}
                   more for Free Delivery to Ikot Udoma!
                 </span>
@@ -160,10 +160,10 @@ export const CartView: React.FC = () => {
                     </div>
                     <div className="text-right sm:text-right mt-1 sm:mt-0">
                       <span className="text-lg font-black text-gray-900 block">
-                        ${(item.laptop.price * item.quantity).toLocaleString()}
+                        ₦{(item.laptop.price * item.quantity).toLocaleString()}
                       </span>
                       <span className="text-xs text-gray-500">
-                        ${item.laptop.price.toLocaleString()} each
+                        ₦{item.laptop.price.toLocaleString()} each
                       </span>
                     </div>
                   </div>
@@ -228,7 +228,7 @@ export const CartView: React.FC = () => {
               <div className="space-y-3 text-xs sm:text-sm">
                 <div className="flex justify-between text-gray-600">
                   <span>Subtotal ({totalItems} items)</span>
-                  <span className="font-bold text-gray-900">${subtotal.toLocaleString()}</span>
+                  <span className="font-bold text-gray-900">₦{subtotal.toLocaleString()}</span>
                 </div>
 
                 {discountAmount > 0 && (
@@ -236,7 +236,7 @@ export const CartView: React.FC = () => {
                     <span className="flex items-center gap-1 font-semibold">
                       <Tag className="w-3.5 h-3.5" /> Discount ({discountCode})
                     </span>
-                    <span className="font-bold">-${discountAmount.toLocaleString()}</span>
+                    <span className="font-bold">-₦{discountAmount.toLocaleString()}</span>
                   </div>
                 )}
 
@@ -248,14 +248,14 @@ export const CartView: React.FC = () => {
                     {shippingFee === 0 ? (
                       <span className="text-emerald-700 font-bold uppercase text-xs">FREE</span>
                     ) : (
-                      <span className="font-bold text-gray-900">${shippingFee}</span>
+                      <span className="font-bold text-gray-900">₦{shippingFee.toLocaleString()}</span>
                     )}
                   </span>
                 </div>
 
                 <div className="flex justify-between text-gray-600">
-                  <span>Estimated Sales Tax (8%)</span>
-                  <span className="font-bold text-gray-900">${taxAmount.toLocaleString()}</span>
+                  <span>Estimated VAT (7.5%)</span>
+                  <span className="font-bold text-gray-900">₦{taxAmount.toLocaleString()}</span>
                 </div>
 
                 <div className="pt-3 border-t border-gray-100 flex justify-between items-baseline">
@@ -264,7 +264,7 @@ export const CartView: React.FC = () => {
                     <span className="text-[10px] text-gray-500">Includes 2-Yr HubShield Warranty</span>
                   </div>
                   <span className="text-2xl font-black text-blue-600">
-                    ${grandTotal.toLocaleString()}
+                    ₦{grandTotal.toLocaleString()}
                   </span>
                 </div>
               </div>

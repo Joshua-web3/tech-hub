@@ -77,7 +77,7 @@ const AppContent: React.FC = () => {
             </div>
 
             <div className="flex items-center gap-2">
-              <span className="text-sm font-black">${subtotal.toLocaleString()}</span>
+              <span className="text-sm font-black">₦{subtotal.toLocaleString()}</span>
               <span className="text-xs bg-blue-700/80 px-2 py-1 rounded-lg flex items-center gap-1">
                 Checkout <ArrowRight className="w-3 h-3" />
               </span>

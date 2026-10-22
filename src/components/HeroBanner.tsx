@@ -116,7 +116,7 @@ export const HeroBanner: React.FC = () => {
                 }}
                 className="px-6 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 active:scale-95 text-white font-bold text-sm shadow-xl shadow-blue-600/30 border border-blue-400/40 transition-all flex items-center gap-2 cursor-pointer"
               >
-                <span>Add to Cart (${activeSlide.laptop.price.toLocaleString()})</span>
+                <span>Add to Cart (₦{activeSlide.laptop.price.toLocaleString()})</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
 
@@ -167,11 +167,11 @@ export const HeroBanner: React.FC = () => {
                   <span className="text-[10px] text-slate-400 uppercase tracking-wider block font-bold">Special Price</span>
                   <div className="flex items-baseline gap-1.5">
                     <span className="text-xl font-black text-blue-400">
-                      ${activeSlide.laptop.price.toLocaleString()}
+                      ₦{activeSlide.laptop.price.toLocaleString()}
                     </span>
                     {activeSlide.laptop.originalPrice && (
                       <span className="text-xs text-slate-500 line-through">
-                        ${activeSlide.laptop.originalPrice.toLocaleString()}
+                        ₦{activeSlide.laptop.originalPrice.toLocaleString()}
                       </span>
                     )}
                   </div>

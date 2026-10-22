@@ -110,7 +110,7 @@ export const CompareModal: React.FC = () => {
                     </div>
 
                     <div className="text-base font-black text-gray-900">
-                      ${laptop.price.toLocaleString()}
+                      ₦{laptop.price.toLocaleString()}
                     </div>
 
                     <button

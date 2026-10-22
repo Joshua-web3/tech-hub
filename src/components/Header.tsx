@@ -231,7 +231,7 @@ export const Header: React.FC = () => {
                       </div>
                       <div className="text-right">
                         <span className="text-xs font-bold text-blue-400">
-                          ${laptop.price.toLocaleString()}
+                          ₦{laptop.price.toLocaleString()}
                         </span>
                       </div>
                     </div>
@@ -263,7 +263,7 @@ export const Header: React.FC = () => {
             >
               <ShoppingCart className="w-5 h-5 text-blue-400" />
               <span className="hidden md:inline-block text-xs font-semibold">
-                ${subtotal.toLocaleString()}
+                ₦{subtotal.toLocaleString()}
               </span>
               {totalItems > 0 && (
                 <span className="absolute -top-1.5 -right-1.5 bg-blue-600 text-white font-bold text-[11px] w-5 h-5 rounded-full flex items-center justify-center ring-2 ring-slate-900 animate-pulse">
@@ -445,7 +445,7 @@ export const Header: React.FC = () => {
             >
               <span>Shopping Cart ({totalItems})</span>
               <span className="text-xs bg-slate-800 px-2 py-0.5 rounded text-blue-400 font-bold">
-                ${subtotal.toLocaleString()}
+                ₦{subtotal.toLocaleString()}
               </span>
             </button>
           </div>

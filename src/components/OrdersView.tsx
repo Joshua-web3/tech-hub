@@ -109,7 +109,7 @@ export const OrdersView: React.FC = () => {
                   <div className="text-right">
                     <span className="text-xs text-gray-500 block font-semibold">Total Paid</span>
                     <span className="text-xl font-black text-blue-600">
-                      ${order.total.toLocaleString()}
+                      ₦{order.total.toLocaleString()}
                     </span>
                   </div>
                 </div>
@@ -216,7 +216,7 @@ export const OrdersView: React.FC = () => {
                               {item.laptop.specs.processor}
                             </p>
                             <span className="text-blue-600 font-bold text-[11px]">
-                              Qty: {item.quantity} × ${item.laptop.price.toLocaleString()}
+                              Qty: {item.quantity} × ₦{item.laptop.price.toLocaleString()}
                             </span>
                           </div>
                         </div>
