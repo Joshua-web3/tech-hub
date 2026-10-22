@@ -1,0 +1,6 @@
+{
+  "name": "Laptop Hub",
+  "description": "Premium laptop retail platform featuring high-performance laptops, custom delivery ordering, secure checkout, and professional hardware advisory.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
